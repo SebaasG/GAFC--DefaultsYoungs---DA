@@ -44,7 +44,7 @@ async function generarCodigos() {
 
 async function existeEnBaseDeDatos(numeroAleatorio) {
     try {
-        const response = await fetch('http://localhost:8085/apiCita/Cod', {
+        const response = await fetch('http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiCita/Cod', {
             method: 'GET'
         });
         if (response.ok) {//verifica que todos los datos lleguen correctamente
@@ -130,7 +130,7 @@ async function enviarRegistros() {
 
 
     for (let index = 0; index < nombres.length; index++) {
-        const response = await fetch("http://localhost:8085/apiApe/save", {
+        const response = await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiApe/save", {
             method: "POST",
             body: JSON.stringify({
                 "docApe": documentos[index], //se manda uno por uno del documento
@@ -162,7 +162,7 @@ async function asginarPrueba() {
     }
     var docIns = localStorage.getItem("datos");
     for (let index = 0; index < nombres.length; index++) {
-        const response = await fetch("http://localhost:8085/apiCita/save", {
+        const response = await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiCita/save", {
             method: "POST",
             body: JSON.stringify({
                 // Datos a enviar en el cuerpo de la solicitud

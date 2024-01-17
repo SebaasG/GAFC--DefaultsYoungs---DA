@@ -1,6 +1,6 @@
 // Obtener el documento del instructor almacenado en el localStorage
 const documentoinstructor = localStorage.getItem("documentoinstructor");
- fetch('http://localhost:8085/apiIns/' + documentoinstructor, {
+ fetch('http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiIns/' + documentoinstructor, {
     method: 'GET'
 })
   .then(response => response.json())
@@ -79,7 +79,7 @@ async function actualizarDatos() {
   };
 
   try {
-      const response = await fetch("http://localhost:8085/apiIns/" + documentoinstructor, {
+      const response = await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiIns/" + documentoinstructor, {
           method: "PUT",
           body: JSON.stringify(data),
           headers: {

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(docIns);
         console.log(contra);
 
-        fetch('http://localhost:8085/apiIns/admin/' + docIns + '/' + contra, {
+        fetch('http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiIns/admin/' + docIns + '/' + contra, {
             method: 'GET'
         })
             .then(response => {

@@ -8,7 +8,7 @@ async function guardar1() {
         var codPro = 1;//Se asigna el tipo de proceso al que pertenece
         console.log(idPregunta,numPreRes,respRes,docApe,codPro);
         try {
-            await fetch("http://localhost:8085/apiRes/saveRes", { //Enviar la respuesta a la API
+            await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiRes/saveRes", { //Enviar la respuesta a la API
                 method: "POST",
                 body: JSON.stringify({
                     "numPreRes": numPreRes,
@@ -33,7 +33,7 @@ async function guardar2() {
         var respRes = document.getElementById(idPregunta).value;
         var docApe = localStorage.getItem("datos");
         var codPro = 1;
-        await fetch("http://localhost:8085/apiRes/saveRes", {
+        await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiRes/saveRes", {
             method: "POST",
             body: JSON.stringify({
                 "numPreRes": numPreRes,
@@ -55,7 +55,7 @@ async function guardar3() {
         var respRes = document.getElementById(idPregunta).value;
         var docApe = localStorage.getItem("datos");
         var codPro = 1;
-        await fetch("http://localhost:8085/apiRes/saveRes", {
+        await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiRes/saveRes", {
             method: "POST",
             body: JSON.stringify({
                 "numPreRes": numPreRes,
@@ -78,7 +78,7 @@ async function guardar4() {
         var respRes = document.getElementById(idPregunta).value;
         var docApe = localStorage.getItem("datos");
         var codPro = 1;
-        await fetch("http://localhost:8085/apiRes/saveRes", {
+        await fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiRes/saveRes", {
             method: "POST",
             body: JSON.stringify({
                 "numPreRes": numPreRes,

@@ -14,7 +14,7 @@ function llenarGrafica(select) {
     // Obtiene el valor seleccionado del elemento con el ID "pruebas"
     var cbo = document.getElementById("pruebas").value;
     var cbof = cbo-1;
-    fetch('http://localhost:8085/apiPrue/'+ documentoSeleccionado+ "/"+cbof ,{
+    fetch('http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiPrue/'+ documentoSeleccionado+ "/"+cbof ,{
         method: 'GET'
     })
         .then(response => response.text())
@@ -128,7 +128,7 @@ function llenarCbo() {
     const cbo = document.getElementById("pruebas");
     const cbofi = cbo - 1;
     const documentoSeleccionado = localStorage.getItem("documentoSeleccionado");
-    fetch("http://localhost:8085/apiPrue/prueba"+"/"+documentoSeleccionado, {
+    fetch("http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiPrue/prueba"+"/"+documentoSeleccionado, {
         method: 'GET'
     })
         .then(response => response.json())
