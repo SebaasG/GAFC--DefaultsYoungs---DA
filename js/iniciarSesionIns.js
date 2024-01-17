@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             return; // No continuar si los campos están vacíos.
         }
-
-        console.log(docIns);
-        console.log(contra);
-
         fetch('http://localhost:8085/gafc-0.0.1-SNAPSHOT/apiIns/' + docIns + '/' + contra, {
             method: 'GET'
         })
